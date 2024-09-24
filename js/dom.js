@@ -16,3 +16,10 @@ sectionList.innerHTML=`
     <li>boilar</li>
     </ul>
 `
+function makeGreenKor(){
+    document.body.style.background='green';
+}
+
+document.getElementById('makeRed').addEventListener('click',function(){
+    document.body.style.background='red';
+})
