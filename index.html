@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom tour</title>
+</head>
+<body>
+    <section id="fristSec">
+        <h1 id="domde">Dom tour dite hobe</h1>
+    </section>
+
+    <script src="js/dom.js"></script>
+    <script>
+        const dde = document.getElementById('domde');
+        console.log(dde)
+        dde.style.color='red';
+        dde.style.background='purple';
+        dde.style.fontSize='43px';
+        dde.classList.remove('background')
+    </script>
+</body>
+</html>
