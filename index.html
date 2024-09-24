@@ -15,11 +15,26 @@
         <button onclick="makeGreenKor()" id="makeGreen">green</button>
     </section>
 
+    <hr> <br><br>
+    <h2 id="default">Default text</h2>
+    <button id="handleChange">handleFunctionClick</button>
+    <br>
+    <h1 id="textFeild">Doctor vs enginier</h1>
+    <input id="inputFeild" type="text"> <button id="button">click</button>
+
     <script src="js/dom.js"></script>
     <script>
-        const dde = document.getElementById('domde');
+        document.getElementById('button').addEventListener('click',function(){
+            const inputFeild = document.getElementById('inputFeild');
+            inputText = inputFeild.value;
+
+            const p = document.getElementById('textFeild');
+            p.innerText=inputText;
+            inputFeild.value='';
+        })
+        // const dde = document.getElementById('domde');
         // console.log(dde)
-        dde.style.color='red';
+        // dde.style.color='red';
         // dde.style.background='purple';
         // dde.style.fontSize='43px';
         // dde.classList.remove('background')

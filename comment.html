@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dom js</title>
+</head>
+<body>
+    <h1>comments...</h1>
+    <div id="mainContainer">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta enim exercitationem blanditiis accusamus voluptas omnis numquam ipsam hic odit et. Aliquid dolore voluptatem dicta, iusto quasi libero, consequatur, voluptate aliquam deserunt exercitationem repudiandae!</p>
+        <p>Quaerat culpa iusto eos explicabo facere nisi assumenda suscipit, at ducimus earum iste nemo hic? Velit animi cum asperiores nobis tempora quae esse dolorem inventore expedita autem voluptates vitae, illo reiciendis ipsa cupiditate.</p>
+        <p>Ipsum tempora minima eligendi magnam earum laudantium in veniam ipsam voluptatem tempore, officiis mollitia cum voluptatibus rerum expedita magni fugiat doloremque voluptates, quaerat, ratione consequuntur. Blanditiis, delectus modi. Voluptates quia deserunt quo. Omnis.</p>
+    </div>
+    <textarea name="" id="inputBox" cols="70" rows="4"></textarea> <br>
+    <button id="submit">submit</button>
+
+    <script>
+        document.getElementById('submit').addEventListener('click',function(){
+            const feildText = document.getElementById('inputBox');
+            const newComment = feildText.value;
+
+            const pText = document.createElement('p');
+            pText.innerText=newComment;
+
+            const manC = document.getElementById('mainContainer');
+            manC.appendChild(pText);
+            feildText.value='';
+        })
+    </script>
+</body>
+</html>

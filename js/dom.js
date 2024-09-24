@@ -23,3 +23,10 @@ function makeGreenKor(){
 document.getElementById('makeRed').addEventListener('click',function(){
     document.body.style.background='red';
 })
+
+
+// change korisma
+const handleChangeText = document.getElementById('handleChange').addEventListener('click',function(){
+   const chnageText= document.getElementById('default');
+   chnageText.innerText='de chomok'
+})
