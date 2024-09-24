@@ -6,7 +6,25 @@
     <title>more event</title>
 </head>
 <body>
-    <h1>this is dom practise</h1>
-    <input id="inputFeild" type="text"> <button id="btnDelete">delete</button>
+    <h1 id="textDelete">this is dom practise</h1>
+    <input id="inputFeild" placeholder="type delete" type="text"> <button id="btnDelete" disabled>delete</button>
+
+    <script>
+        document.getElementById('inputFeild').addEventListener('keyup',function(event){
+            text=event.target.value;
+            const deleteButton = document.getElementById('btnDelete');
+            if(text === 'delete'){
+                deleteButton.removeAttribute('disabled')
+            }else{
+                deleteButton.setAttribute('disabled',true)
+            }
+            
+        })
+
+        document.getElementById('btnDelete').addEventListener('click', function(){
+            const textDel = document.getElementById('textDelete');
+            textDel.style.display='none';
+        })
+    </script>
 </body>
 </html>
